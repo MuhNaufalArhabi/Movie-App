@@ -2,10 +2,10 @@ require('dotenv').config();
 console.log(process.env.DB_PASS)
 module.exports ={
   "development": {
-    "username": process.env.DB_USER,
-    "password": process.env.DB_PASS,
+    "username": "postgres",
+    "password": "postgres",
     "database": "movie_DB",
-    "host": process.env.DB_HOST,
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
@@ -16,7 +16,7 @@ module.exports ={
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "DATABASE_URL",
+    "use_env_variable": process.env.DATABASE_URL,
     "dialectOptions": {
       "ssl": {
         "rejectUnauthorized": false

@@ -1,4 +1,6 @@
-require("dotenv").config();
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 
 import { ApolloServer } from "apollo-server";
 import { typeDefs, resolvers } from "./resolvers";
