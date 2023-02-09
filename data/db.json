@@ -1,0 +1,103 @@
+{
+    "authors": [
+      {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "test@gmail.com",
+        "phoneNumber": 123456789,
+        "address": "buntu street"
+      },
+      {
+        "id": 2,
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "a@gmail.com",
+        "phoneNumber": 123456789,
+        "address": "buntu street"
+      }
+    ],
+    "movies": [
+      {
+        "id": 1,
+        "title": "Harry Potter",
+        "year": 2002,
+        "synopsis": "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.",
+        "rating": 4,
+        "AuthorId": 1
+        
+      },
+      {
+        "id": 2,
+        "title": "Spider-man No Way Home",
+        "year": 2019,
+        "synopsis": "With Spider-Man's identity now revealed, our friendly neighborhood web-slinger is unmasked and no longer able to separate his normal life as Peter Parker from the high stakes of being a superhero",
+        "rating": 4,
+        "AuthorId": 2
+        
+      },
+      {
+        "id": 4,
+        "title": "Annabelle Creation",
+        "year": 2016,
+        "synopsis": "Former toy maker Sam Mullins and his wife, Esther, are happy to welcome a nun and six orphaned girls into their California farmhouse.",
+        "rating": 5,
+        "AuthorId": 1
+        
+      },
+      {
+        "id": 3,
+        "title": "Avengers Endgame",
+        "year": 2018,
+        "synopsis": "Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle",
+        "rating": 4,
+        "AuthorId": 2
+        
+      }
+    ],
+    "actors": [
+      {
+        "id": 1,
+        "name": "Daniel Radcliffe"
+      },
+      {
+        "id": 2,
+        "name": "Tom Holland"
+      },
+      {
+        "id": 3,
+        "name": "Benedict Cumberbatch"
+      },
+      {
+        "id": 4,
+        "name": "Talitha Bateman"
+      }
+    ],
+    "relations": [
+      {
+        "id": 1,
+        "MovieId": 1,
+        "ActorId": 1
+      },
+      {
+        "id": 2,
+        "MovieId": 2,
+        "ActorId": 2
+      },
+      {
+        "id": 3,
+        "MovieId": 3,
+        "ActorId": 3
+      },
+      {
+        "id": 4,
+        "MovieId": 4,
+        "ActorId": 3
+      },
+      {
+        "id": 5,
+        "MovieId": 4,
+        "ActorId": 2
+      }
+    ]
+  }
