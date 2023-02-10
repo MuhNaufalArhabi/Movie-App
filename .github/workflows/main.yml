@@ -9,6 +9,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432/tcp
 
     strategy:
       matrix:
@@ -21,5 +29,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+      env:
+        PG_USER: postgres
+        PG_DATABASE: postgres
+        PG_PASSWORD: postgres
+        PG_PORT: ${{ job.services.postgres.ports['5432'] }}
     - run: npm install
     - run: npm run test
