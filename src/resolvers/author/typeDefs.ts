@@ -31,4 +31,4 @@ type Mutation {
     updateAuthor(id: ID!, author: AuthorInput!): Message
     deleteAuthor(id: ID!): Message
 }
-`
+`;

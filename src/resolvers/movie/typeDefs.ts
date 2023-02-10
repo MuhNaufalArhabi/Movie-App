@@ -1,4 +1,3 @@
-
 export const typeDefs = `#graphql
 
 type Movie {
@@ -34,7 +33,4 @@ type Mutation {
     addMovie(movie: MovieInput!): Movie!
     updateMovie(id: ID!, movie: MovieInput!): Message
     deleteMovie(id: ID!): Message
-}`
-
-
-
+}`;

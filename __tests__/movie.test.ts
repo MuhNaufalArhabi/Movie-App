@@ -138,7 +138,6 @@ describe("movie", () => {
       },
     });
     expect(responseUpdate.data?.message).toBe(String);
-
   });
 
   it("delete movie", async () => {
@@ -146,7 +145,7 @@ describe("movie", () => {
       query: gql`
         mutation deleteMovie($id: ID!) {
           deleteMovie(id: $id)
-            message
+          message
         }
       `,
       variables: {

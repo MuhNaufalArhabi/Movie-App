@@ -43,7 +43,7 @@ export const resolvers = {
         const relationRepository = sequelize.getRepository(Relation);
         const author = await authorRepository.findByPk(args.movie.AuthorId);
         if (!author) throw new Error("Author not found");
-        const { title, year, rating, synopsis, AuthorId, Actors} = args.movie;
+        const { title, year, rating, synopsis, AuthorId, Actors } = args.movie;
         const movie = await movieRepository.create({
           title,
           year,
@@ -53,10 +53,14 @@ export const resolvers = {
         });
         Actors.forEach(async (actor) => {
           const [actorInstance, created] = await actorRepository.findOrCreate({
-            where: { name: actor.name },defaults: { name: actor.name }
-          })
+            where: { name: actor.name },
+            defaults: { name: actor.name },
+          });
           console.log(actorInstance.id, created);
-          await relationRepository.create({MovieId: movie.id, ActorId: actorInstance.id})
+          await relationRepository.create({
+            MovieId: movie.id,
+            ActorId: actorInstance.id,
+          });
         });
         return movie;
       } catch (error) {

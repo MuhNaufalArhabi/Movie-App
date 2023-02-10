@@ -21,4 +21,4 @@ type Mutation {
     updateActor(id: ID!, actor: ActorInput!): Message
     deleteActor(id: ID!): Message
 }
-`
+`;

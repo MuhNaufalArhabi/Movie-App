@@ -2,7 +2,7 @@ import { gql } from "apollo-server";
 import { server } from "../src/index";
 
 describe("author", () => {
-  let authorId : any
+  let authorId: any;
   it("add author", async () => {
     const responseAdd = await server.executeOperation({
       query: gql`
@@ -27,7 +27,7 @@ describe("author", () => {
         },
       },
     });
-    authorId = responseAdd.data?.addAuthor.id
+    authorId = responseAdd.data?.addAuthor.id;
     expect(responseAdd.errors).toBeUndefined();
     expect(responseAdd.data?.addAuthor).toHaveProperty("id");
     expect(responseAdd.data?.addAuthor).toHaveProperty("firstName");
@@ -106,8 +106,8 @@ describe("author", () => {
           email: "cobaUpdate@gmail.com",
           phoneNumber: "08123456789",
           address: "Jl. CobaUpdate",
-        }
-      }
+        },
+      },
     });
     expect(responseUpdate.errors).toBeUndefined();
     expect(responseUpdate.data?.updateAuthor).toHaveProperty("message");
@@ -124,10 +124,9 @@ describe("author", () => {
       `,
       variables: {
         id: authorId,
-      }
+      },
     });
     expect(responseDelete.errors).toBeUndefined();
     expect(responseDelete.data?.deleteAuthor).toHaveProperty("message");
   });
-})
-
+});
