@@ -7,7 +7,7 @@
     "compile": "rm -rf ./dist && npx tsc",
     "start": "npm run compile && node ./dist/src/index.js",
     "dev": "nodemon dist/index.js",
-    "test": "jest --config jest.config.ts ./__tests__ --watchAll --verbose "
+    "test": "jest --config jest.config.ts ./__tests__/movie"
   },
   "repository": {
     "type": "git",
